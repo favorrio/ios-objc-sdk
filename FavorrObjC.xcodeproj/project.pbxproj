@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7449BCB01DDFD14800F6B13F /* FavorrObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 7449BCAE1DDFD14800F6B13F /* FavorrObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7449BCEA1DDFD7AE00F6B13F /* Favorr.h in Headers */ = {isa = PBXBuildFile; fileRef = 7449BCE81DDFD7AE00F6B13F /* Favorr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7449BCEB1DDFD7AE00F6B13F /* Favorr.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449BCE91DDFD7AE00F6B13F /* Favorr.m */; };
+		7449BCEF1DDFD83800F6B13F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449BCEE1DDFD83800F6B13F /* UIKit.framework */; };
+		7449BCF11DDFD83E00F6B13F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449BCF01DDFD83E00F6B13F /* AdSupport.framework */; };
+		746007FE1DE50B5B00C9F89A /* FavorrAdView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746007FC1DE50B5B00C9F89A /* FavorrAdView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746007FF1DE50B5B00C9F89A /* FavorrAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746007FD1DE50B5B00C9F89A /* FavorrAdView.m */; };
+		74FEA0831DE510ED00C74CC7 /* FavorrAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74FEA0821DE510ED00C74CC7 /* FavorrAssets.xcassets */; };
+		74FEA0851DE5125500C74CC7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FEA0841DE5125500C74CC7 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7449BCAB1DDFD14800F6B13F /* FavorrObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FavorrObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7449BCAE1DDFD14800F6B13F /* FavorrObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavorrObjC.h; sourceTree = "<group>"; };
+		7449BCAF1DDFD14800F6B13F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7449BCE81DDFD7AE00F6B13F /* Favorr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorr.h; sourceTree = "<group>"; };
+		7449BCE91DDFD7AE00F6B13F /* Favorr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorr.m; sourceTree = "<group>"; };
+		7449BCEE1DDFD83800F6B13F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7449BCF01DDFD83E00F6B13F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		746007FC1DE50B5B00C9F89A /* FavorrAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorrAdView.h; sourceTree = "<group>"; };
+		746007FD1DE50B5B00C9F89A /* FavorrAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavorrAdView.m; sourceTree = "<group>"; };
+		74FEA0821DE510ED00C74CC7 /* FavorrAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FavorrAssets.xcassets; sourceTree = "<group>"; };
+		74FEA0841DE5125500C74CC7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7449BCA71DDFD14800F6B13F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FEA0851DE5125500C74CC7 /* QuartzCore.framework in Frameworks */,
+				7449BCF11DDFD83E00F6B13F /* AdSupport.framework in Frameworks */,
+				7449BCEF1DDFD83800F6B13F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7449BCA11DDFD14800F6B13F = {
+			isa = PBXGroup;
+			children = (
+				7449BCAD1DDFD14800F6B13F /* FavorrObjC */,
+				7449BCAC1DDFD14800F6B13F /* Products */,
+				7449BCED1DDFD83800F6B13F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7449BCAC1DDFD14800F6B13F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7449BCAB1DDFD14800F6B13F /* FavorrObjC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7449BCAD1DDFD14800F6B13F /* FavorrObjC */ = {
+			isa = PBXGroup;
+			children = (
+				7449BCAE1DDFD14800F6B13F /* FavorrObjC.h */,
+				7449BCAF1DDFD14800F6B13F /* Info.plist */,
+				7449BCE81DDFD7AE00F6B13F /* Favorr.h */,
+				7449BCE91DDFD7AE00F6B13F /* Favorr.m */,
+				746007FC1DE50B5B00C9F89A /* FavorrAdView.h */,
+				746007FD1DE50B5B00C9F89A /* FavorrAdView.m */,
+				74FEA0821DE510ED00C74CC7 /* FavorrAssets.xcassets */,
+			);
+			path = FavorrObjC;
+			sourceTree = "<group>";
+		};
+		7449BCED1DDFD83800F6B13F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74FEA0841DE5125500C74CC7 /* QuartzCore.framework */,
+				7449BCF01DDFD83E00F6B13F /* AdSupport.framework */,
+				7449BCEE1DDFD83800F6B13F /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7449BCA81DDFD14800F6B13F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449BCB01DDFD14800F6B13F /* FavorrObjC.h in Headers */,
+				7449BCEA1DDFD7AE00F6B13F /* Favorr.h in Headers */,
+				746007FE1DE50B5B00C9F89A /* FavorrAdView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7449BCAA1DDFD14800F6B13F /* FavorrObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7449BCB31DDFD14800F6B13F /* Build configuration list for PBXNativeTarget "FavorrObjC" */;
+			buildPhases = (
+				7449BCA61DDFD14800F6B13F /* Sources */,
+				7449BCA71DDFD14800F6B13F /* Frameworks */,
+				7449BCA81DDFD14800F6B13F /* Headers */,
+				7449BCA91DDFD14800F6B13F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FavorrObjC;
+			productName = FavorrObjC;
+			productReference = 7449BCAB1DDFD14800F6B13F /* FavorrObjC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7449BCA21DDFD14800F6B13F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Favorr, Inc.";
+				TargetAttributes = {
+					7449BCAA1DDFD14800F6B13F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FUFRNGGSHX;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7449BCA51DDFD14800F6B13F /* Build configuration list for PBXProject "FavorrObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7449BCA11DDFD14800F6B13F;
+			productRefGroup = 7449BCAC1DDFD14800F6B13F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7449BCAA1DDFD14800F6B13F /* FavorrObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7449BCA91DDFD14800F6B13F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FEA0831DE510ED00C74CC7 /* FavorrAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7449BCA61DDFD14800F6B13F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449BCEB1DDFD7AE00F6B13F /* Favorr.m in Sources */,
+				746007FF1DE50B5B00C9F89A /* FavorrAdView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7449BCB11DDFD14800F6B13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7449BCB21DDFD14800F6B13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7449BCB41DDFD14800F6B13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FUFRNGGSHX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FavorrObjC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.livebuzz.FavorrObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7449BCB51DDFD14800F6B13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FUFRNGGSHX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FavorrObjC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.livebuzz.FavorrObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7449BCA51DDFD14800F6B13F /* Build configuration list for PBXProject "FavorrObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449BCB11DDFD14800F6B13F /* Debug */,
+				7449BCB21DDFD14800F6B13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7449BCB31DDFD14800F6B13F /* Build configuration list for PBXNativeTarget "FavorrObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449BCB41DDFD14800F6B13F /* Debug */,
+				7449BCB51DDFD14800F6B13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7449BCA21DDFD14800F6B13F /* Project object */;
+}

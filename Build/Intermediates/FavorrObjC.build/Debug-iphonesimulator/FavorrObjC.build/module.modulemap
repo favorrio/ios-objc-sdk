@@ -1,0 +1,6 @@
+framework module FavorrObjC {
+  umbrella header "FavorrObjC.h"
+
+  export *
+  module * { export * }
+}
