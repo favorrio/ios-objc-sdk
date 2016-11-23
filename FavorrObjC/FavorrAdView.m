@@ -114,7 +114,7 @@
     
     // Review Count Label
     CGFloat review_count_label_x = self.star_icon_5.frame.origin.x + self.star_icon_5.frame.size.width;
-    CGFloat review_count_label_y = self.star_icon_5.frame.origin.y;
+    CGFloat review_count_label_y = self.price_label.frame.origin.y;
     self.review_count_label = [[UILabel alloc] initWithFrame:CGRectMake(review_count_label_x, review_count_label_y, 32, 16)];
     self.review_count_label.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:11];
     [self.contentView addSubview:self.review_count_label];
@@ -148,8 +148,6 @@
     
     // hide everything...
     self.contentView.hidden = YES;
-    
-    NSLog(@"requestAd -- 1 --");
     
     // show indicator
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -209,9 +207,6 @@
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-        
-        NSLog(@"requestAd -- 2 --");
-        
         // Stop Indicator
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.activityIndicator stopAnimating];
@@ -219,7 +214,7 @@
         });
         
         if (error != nil){
-            NSLog(@"error:%@",[error description]);
+            // sNSLog(@"error:%@",[error description]);
             
             NSDictionary *userInfo = @{@"code" : @"101", @"detail":error.description};
             NSError *error = [NSError errorWithDomain:@"favorr" code:101 userInfo:userInfo];
@@ -233,7 +228,7 @@
         NSError *parseError = nil;
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
         
-        NSLog(@"responseDictionary:%@", [responseDictionary description]);
+        // NSLog(@"responseDictionary:%@", [responseDictionary description]);
         
         NSString *result_code = responseDictionary[@"result_code"];
         if (![result_code  isEqual: @"success"]) {
@@ -246,20 +241,15 @@
         }
         
         // Success
-        NSLog(@"requestAd -- 3 --");
-        
-        NSLog(@"responseDictionary, %@",[responseDictionary description]);
         
         // Setting Info
         NSDictionary *setting_info = responseDictionary[@"setting_info"];
-        NSLog(@"setting_info:%@",[setting_info description]);
         
         if (setting_info != nil){
             
             // favorrTextColor
             NSString *favorrTextColor = setting_info[@"favorrTextColor"];
             if (favorrTextColor != nil){
-                NSLog(@"favorrTextColor:%@", favorrTextColor);
                 NSArray *arr = [favorrTextColor componentsSeparatedByString:@"::"];
                 CGFloat red = [arr[0] floatValue];
                 CGFloat green = [arr[1] floatValue];
@@ -271,7 +261,6 @@
             // favorrBackgroundColor
             NSString *favorrBackgroundColor = setting_info[@"favorrBackgroundColor"];
             if (favorrBackgroundColor != nil){
-                NSLog(@"favorrBackgroundColor:%@", favorrBackgroundColor);
                 NSArray *arr = [favorrBackgroundColor componentsSeparatedByString:@"::"];
                 CGFloat red = [arr[0] floatValue];
                 CGFloat green = [arr[1] floatValue];
@@ -299,9 +288,6 @@
         NSDictionary *ad_info = responseDictionary[@"ad_info"];
         if ( ad_info != nil ) {
             
-            
-            NSLog(@"requestAd -- 4 --");
-            
             // Draw Banner
             self.banner_params = ad_info;
             [self drawAd];
@@ -327,8 +313,6 @@
 // Re Draw Ad
 -(void)drawAd {
     
-    NSLog(@"drawAd -- 1 --");
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.favorrBackgroundColor != nil) {
             self.contentView.backgroundColor = self.favorrBackgroundColor;
@@ -344,8 +328,6 @@
     self.banner_log_id = self.banner_params[@"banner_log_id"];
     
     NSBundle *frameWorkBundle = [NSBundle bundleForClass:[Favorr class]];
-    NSLog(@"frameWorkBundle:%@", [frameWorkBundle description]);
-    
     
     // Install Incon
     
@@ -555,8 +537,6 @@
 // Download Icon
 -(void)download_icon:(NSString*) icon_url{
     
-    NSLog(@"download_icon -- 1 --, %@",[icon_url description]);
-    
     NSURL *url = [NSURL URLWithString:icon_url];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -565,7 +545,7 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
-            NSLog(@"error:%@",[error description]);
+            // NSLog(@"error:%@",[error description]);
             return;
         }
         
@@ -603,8 +583,6 @@
                 [[Favorr sharedInstance] send_log:self.trackId unitId:self.unitId banner_log_id:self.banner_log_id action:@"show"];
             }];
         }
-    } else {
-        NSLog(@"unko");
     }
 }
 
@@ -792,6 +770,7 @@
 // change install button color
 -(void) updateInstallButtonColor:(NSString*)type{
     
+    self.installButtonColorType = type;
     NSBundle *frameWorkBundle = [NSBundle bundleForClass:[Favorr class]];
     
     NSString *install_icon_image = @"install_icon";

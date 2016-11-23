@@ -11,8 +11,6 @@
 @import AdSupport;
 #import "FavorrAdView.h"
 
-
-
 @interface Favorr : NSObject
 
 // properties
@@ -29,20 +27,14 @@
 @property (nonatomic, strong) NSString *ad_available;
 
 // completion block
-// typedef void(^myCompletion)(BOOL);
-
-// typedef void (^callbackWithParams) (NSDictionary * _Nonnull params, NSError * _Nullable error);
-// typedef void (^callbackWithUrl) (NSString *  url, NSError *  error);
-
 typedef void(^favorrCompletion)(NSError *error, NSDictionary *dict);
 
 // methods
 +(Favorr*)sharedInstance;
 
-// -(void) myMethod:(myCompletion) compblock;
-
 // init favorr
 -(void)initWithApiKey:(NSString*)apiKey block:(favorrCompletion) compblock;
+
 // update session with callback
 -(void)updateSessionWithCompletion:(favorrCompletion) compblock;
 

@@ -39,9 +39,8 @@
 // init with apiKey
 -(void)initWithApiKey:(NSString*)apiKey block:(favorrCompletion) compblock{
     
-    NSLog(@"apiKey:%@", [apiKey description]);
-    
-    
+    // NSLog(@"apiKey:%@", [apiKey description]);
+
     if (apiKey == nil) {
         NSDictionary *userInfo = @{@"code" : @"101", @"detail":@"API Key is not set"};
         NSError *error = [NSError errorWithDomain:@"favorr" code:101 userInfo:userInfo];
@@ -70,7 +69,7 @@
             return;
         }
         
-        NSLog(@"dict:%@", [dict description]);
+        // NSLog(@"dict:%@", [dict description]);
     }];
     
     
@@ -89,8 +88,6 @@
 
 // update session with callback
 -(void)updateSessionWithCompletion:(favorrCompletion) compblock{
-    
-    NSLog(@"updateSessionWithCompletion -- 1 --");
     
     // prepare parameters
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -134,9 +131,6 @@
         [dict setObject:self.sessionId forKey:@"sessionId"];
     }
     
-    NSLog(@"updateSessionWithCompletion -- 2 --");
-    NSLog(@"dict:%@", [dict description]);
-    
     // post request
     NSError *error;
     
@@ -164,11 +158,9 @@
             return;
         }
 
-        NSError *parseError = nil;
-        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-        
-        NSLog(@"responseDictionary:%@", [responseDictionary description]);
-                
+//        NSError *parseError = nil;
+//        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+//        
         compblock(nil, nil);
         
     }];
@@ -244,12 +236,11 @@
 
 // update session status
 -(void)updateSession {
-    NSLog(@"updateSession -- 1 --");
     
     // prepare parameters
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     if (self.apiKey == nil) {
-        NSLog(@"No API Key found");
+//        NSLog(@"No API Key found");
         return;
     } else {
         [dict setObject:self.apiKey forKey:@"apiKey"];
@@ -301,16 +292,14 @@
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error != nil){
-            NSLog(@"error:%@",[error description]);
+            // NSLog(@"error:%@",[error description]);
             return;
         }
         
-        NSError *parseError = nil;
-        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-        
-        NSLog(@"responseDictionary:%@", [responseDictionary description]);
-        
-//        compblock(nil, nil);
+//        NSError *parseError = nil;
+//        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+//        
+        // NSLog(@"responseDictionary:%@", [responseDictionary description]);
         
     }];
     
@@ -344,7 +333,6 @@
 
 // Send Log
 -(void)send_log:(int)trackId unitId:(NSString*)unitId banner_log_id:(NSString*)banner_log_id action:(NSString*)action {
-    NSLog(@"send_log -- 1 --");
     
     // prepare parameters
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -413,16 +401,15 @@
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error != nil){
-            NSLog(@"error:%@",[error description]);
+            // NSLog(@"error:%@",[error description]);
             return;
         }
         
-         NSError *parseError = nil;
-         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-        
-         NSLog(@"responseDictionary:%@", [responseDictionary description]);
+//         NSError *parseError = nil;
+//         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+//        
+         // NSLog(@"responseDictionary:%@", [responseDictionary description]);
 
-        
     }];
     
     [postDataTask resume];
@@ -437,7 +424,6 @@
 
 // Check Ad Availability
 -(void)checkAdAvailable:(NSString*)unitId block:(favorrCompletion) compblock{
-    NSLog(@"checkAdAvailable -- 1 --");
     
     // prepare parameters
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -471,13 +457,13 @@
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error != nil){
-            NSLog(@"error:%@",[error description]);
+            // NSLog(@"error:%@",[error description]);
             return;
         }
         
         NSError *parseError = nil;
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-        NSLog(@"responseDictionary:%@", [responseDictionary description]);
+        // NSLog(@"responseDictionary:%@", [responseDictionary description]);
         
         NSString *result_code = responseDictionary[@"result_code"];
         if (![result_code  isEqual: @"success"]){

@@ -11,18 +11,11 @@
 @import AdSupport;
 @import StoreKit;
 
-
-
-
-
-
 // Define Delegate methods
 @protocol FavorrAdViewDelegate <NSObject>
 - (void)FavorrAdViewDelegateDidReceiveAd:(NSDictionary*) parameters;
 - (void)FavorrAdViewDelegateDidReceiveError:(NSError*) error;
 @end
-
-
 
 @interface FavorrAdView : UIView
 
@@ -65,5 +58,15 @@
 
 // Request Ads
 -(void)requestAd;
+
+// change textcolor
+-(void)updateTextColor:(UIColor*)color;
+// change star color
+-(void)updateStarColor:(NSString*)type;
+// change install button color
+-(void) updateInstallButtonColor:(NSString*)type;
+// change background color
+-(void)updateBackgroundColor:(UIColor*)color;
+
 
 @end
