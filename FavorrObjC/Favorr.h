@@ -24,7 +24,8 @@
 @property (nonatomic, strong) NSTimer *pingTimer;
 @property (nonatomic, strong) NSString *sessionId;
 @property _Bool isNetworking;
-@property (nonatomic, strong) NSString *ad_available;
+// @property (nonatomic, strong) NSString *ad_available;
+@property _Bool ad_available;
 
 // completion block
 typedef void(^favorrCompletion)(NSError *error, NSDictionary *dict);

@@ -8,6 +8,16 @@
       'contents': [
         {
           'type': 'file',
+          'name': "Favorr.h",
+          'external-contents': "/Users/kouohhashi/Documents/iPhone/FavorrObjC/FavorrObjC/Favorr.h"
+        },
+        {
+          'type': 'file',
+          'name': "FavorrAdView.h",
+          'external-contents': "/Users/kouohhashi/Documents/iPhone/FavorrObjC/FavorrObjC/FavorrAdView.h"
+        },
+        {
+          'type': 'file',
           'name': "FavorrObjC-Swift.h",
           'external-contents': "/Users/kouohhashi/Documents/iPhone/FavorrObjC/Build/Products/Debug-iphonesimulator/FavorrObjC.framework/Headers/FavorrObjC-Swift.h"
         },

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FavorrObjC"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Favorr Cross Promotion SDK written by Objective-C"
 
   # This description is used to generate tags and improve search results.
@@ -83,7 +83,7 @@ Pod::Spec.new do |s|
   #
 
   # s.source       = { :path => '.' }
-  s.source       = { :git => "https://github.com/favorrio/ios-objc-sdk.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/favorrio/ios-objc-sdk.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

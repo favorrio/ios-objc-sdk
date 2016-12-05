@@ -40,6 +40,8 @@
 -(void)initWithApiKey:(NSString*)apiKey block:(favorrCompletion) compblock{
     
     // NSLog(@"apiKey:%@", [apiKey description]);
+    
+    self.ad_available = NO;
 
     if (apiKey == nil) {
         NSDictionary *userInfo = @{@"code" : @"101", @"detail":@"API Key is not set"};
@@ -65,9 +67,24 @@
     // updateSessionWithCompletion
     [self updateSessionWithCompletion:^(NSError *error, NSDictionary *dict) {
         if (error){
+            
+            self.ad_available = NO;
+            
             compblock(error, nil);
             return;
         }
+        
+//        NSString *result_code = dict[@"result_code"];
+//        BOOL ad_available = dict[@"ad_available"];
+//        // NSLog(@"result_code:%@, ad_available:%d",result_code, ad_available);
+//        
+//        if ([result_code isEqualToString:@"success"]) {
+//            if (ad_available == YES) {
+//                self.ad_available = YES;
+//            }
+//        }
+        
+        compblock(nil, dict);
         
         // NSLog(@"dict:%@", [dict description]);
     }];
@@ -158,10 +175,22 @@
             return;
         }
 
-//        NSError *parseError = nil;
-//        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-//        
-        compblock(nil, nil);
+        NSError *parseError = nil;
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+        if (parseError != nil){
+            compblock(parseError, nil);
+        } else {
+            
+            NSString *result_code = responseDictionary[@"result_code"];
+            BOOL ad_available = responseDictionary[@"ad_available"];
+            if ([result_code isEqualToString:@"success"]) {
+                if (ad_available == YES) {
+                    self.ad_available = YES;
+                }
+            }
+            
+            compblock(nil, responseDictionary);
+        }
         
     }];
     
@@ -292,14 +321,33 @@
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error != nil){
+            self.ad_available = NO;
             // NSLog(@"error:%@",[error description]);
             return;
         }
+
         
-//        NSError *parseError = nil;
-//        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-//        
-        // NSLog(@"responseDictionary:%@", [responseDictionary description]);
+        NSError *parseError = nil;
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+        if (parseError != nil){
+            // compblock(parseError, nil);
+            self.ad_available = NO;
+        } else {
+            
+            NSString *result_code = responseDictionary[@"result_code"];
+            BOOL ad_available = responseDictionary[@"ad_available"];
+            if ([result_code isEqualToString:@"success"]) {
+                if (ad_available == YES) {
+                    self.ad_available = YES;
+                } else {
+                    self.ad_available = NO;
+                }
+            } else {
+                self.ad_available = NO;
+            }
+            
+            // compblock(nil, responseDictionary);
+        }
         
     }];
     
