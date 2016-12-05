@@ -74,16 +74,6 @@
             return;
         }
         
-//        NSString *result_code = dict[@"result_code"];
-//        BOOL ad_available = dict[@"ad_available"];
-//        // NSLog(@"result_code:%@, ad_available:%d",result_code, ad_available);
-//        
-//        if ([result_code isEqualToString:@"success"]) {
-//            if (ad_available == YES) {
-//                self.ad_available = YES;
-//            }
-//        }
-        
         compblock(nil, dict);
         
         // NSLog(@"dict:%@", [dict description]);
@@ -182,7 +172,7 @@
         } else {
             
             NSString *result_code = responseDictionary[@"result_code"];
-            BOOL ad_available = responseDictionary[@"ad_available"];
+            BOOL ad_available = [responseDictionary[@"ad_available"] boolValue];
             if ([result_code isEqualToString:@"success"]) {
                 if (ad_available == YES) {
                     self.ad_available = YES;
@@ -335,7 +325,7 @@
         } else {
             
             NSString *result_code = responseDictionary[@"result_code"];
-            BOOL ad_available = responseDictionary[@"ad_available"];
+            BOOL ad_available = [responseDictionary[@"ad_available"] boolValue];
             if ([result_code isEqualToString:@"success"]) {
                 if (ad_available == YES) {
                     self.ad_available = YES;
